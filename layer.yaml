@@ -1,2 +1,3 @@
+repo: https://github.com/elastisys/layer-charmscaler
 includes:
   - layer:charmscaler-base
