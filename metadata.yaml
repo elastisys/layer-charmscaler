@@ -1,0 +1,5 @@
+name: charmscaler
+maintainers:
+  - Elastisys <techteam@elastisys.com>
+series:
+  - xenial
