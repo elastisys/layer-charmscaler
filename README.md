@@ -122,7 +122,7 @@ Deploy and relate the charms
     juju relate charmscaler:db-api influxdb:query
     juju relate telegraf:influxdb-api influxdb:query
     juju relate telegraf:juju-info [charm]:juju-info
-    juju relate charmscaler:juju-info [charm]:juju-info
+    juju relate charmscaler:scalable-charm [charm]:juju-info
 
 # How the CharmScaler operates
 
