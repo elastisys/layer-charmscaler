@@ -47,4 +47,4 @@ options:
     description: |
       Time (in seconds) before making another scaling decision from the time of
       the last up- or downscale. This is useful to prevent extra resizes due to
-      slow teardowns or, in perticular, upstarts.
+      slow teardowns or, in particular, upstarts.
