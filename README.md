@@ -233,12 +233,19 @@ alert email messages to.
 
 ## Known limitations
 
-#### When deploying on LXD provider
+#### Using the localhost/LXD provider
 
 Due to missing support for the Docker LXC profile in Juju you need to apply it
 manually.
 
 See: https://bugs.launchpad.net/juju/+bug/1552815
+
+It's important to consider that you're dealing with containers on a single host
+when using LXD unlike isolated VMs when operating on a public cloud. The CPU
+metrics of the containers will be impacted by things going on the system in
+large. Read more about controlling system resources for specific LXC containers
+[here](https://stgraber.org/2016/03/26/lxd-2-0-resource-control-412/).
+
 
 -----------------------
 
