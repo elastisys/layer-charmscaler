@@ -3,3 +3,4 @@ maintainers:
   - Elastisys <techteam@elastisys.com>
 series:
   - xenial
+  - bionic
