@@ -66,19 +66,6 @@ scaled by the Elastisys autoscaler is really easy.
 Read more about Elastisys' cloud automation platform at
 [https://elastisys.com](https://elastisys.com).
 
-# Subscription
-
-The free edition places a constraint on the size of the scaled application to
-four units. To remove this restriction you need to become a paying subscription
-user. Juju is currently in beta, and does not yet support commercial charms.
-Once Juju is officially released, the CharmScaler will be available as a
-subscription service. Until then, you can contact us and we will help you set
-up a temporary subscription arrangement.
-
-For upgrading to a premium subscription, for a customized solution, or for
-general questions or feature requests, feel free to contact Elastisys at
-[contact@elastisys.com](mailto:contact@elastisys.com).
-
 # Quickstart
 
 If you can't wait to get started, the following minimal example (relying on
@@ -98,14 +85,15 @@ Create a user and grant it model write access
 
 *To set the password, execute the `juju register` command line given to you*
 
-Get the Juju API address and model UUID
+Get the Juju API address, CA certificate and model UUID
 
     juju show-controller
 
 Minimal config.yaml example
 
     charmscaler:
-      juju_api_endpoint: "[API address]:17070"
+      juju_api_endpoint: "[controller API address]:17070"
+      juju_ca_cert: "[base64 encoded controller CA cert]"
       juju_model_uuid: "[uuid]"
       juju_username: "[username]"
       juju_password: "[password]"
@@ -115,8 +103,8 @@ Minimal config.yaml example
 Deploy and relate the charms
 
     juju deploy charmscaler --config=config.yaml
-    juju deploy cs:~chris.macnaughton/influxdb-7
-    juju deploy telegraf-2
+    juju deploy influxdb
+    juju deploy telegraf
     juju deploy [charm]
 
     juju relate charmscaler:db-api influxdb:query
