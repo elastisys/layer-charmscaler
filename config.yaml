@@ -1,10 +1,10 @@
 options:
   autoscaler_version:
-    default: "5.0.1"
+    default: "5.2.2"
   autoscaler_image:
-    default: elastisys/charmscaler-restricted
+    default: elastisys/autoscaler-standard
   charmpool_version:
-    default: "0.0.5"
+    default: "0.1.0"
   charmpool_image:
     default: elastisys/charmpool
   metric_data_settling_interval:
